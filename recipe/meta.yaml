@@ -22,7 +22,7 @@ requirements:
     - python >=3.6
     - tiktoken
     - dataclasses-json
-    - langchain >=0.0.293
+    - langchain >=0.0.303
     - sqlalchemy >=2.0.15
     - numpy
     - tenacity >=8.2.0,<9.0.0
@@ -35,6 +35,7 @@ requirements:
     - beautifulsoup4
     - nest-asyncio
     - nltk
+    - tree_sitter_languages
 
 test:
   imports:
