@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.8.38" %}
+{% set version = "0.8.39.post2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: c9e024b9ee1a154de7ddda564f789babb38408740b07569af29a36668c262280
+  sha256: 3145b15a6330c7c08cedbd60dcfad19b8d40553d4a0da1da248ead113c67d8a4
 
 build:
   noarch: python
