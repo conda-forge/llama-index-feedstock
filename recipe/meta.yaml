@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.8.42" %}
+{% set version = "0.8.45.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: 14cca43188d9afd058d74c5574e745dc937e724a20576a9ef81967b9f2659b03
+  sha256: 90752bd0358de30fa904e81214f86e4db86b9bf89a7b551153a049de2cb38633
 
 build:
   noarch: python
@@ -20,21 +20,21 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - tiktoken
-    - dataclasses-json
+    - tiktoken >=0.3.3
+    - dataclasses-json >=0.5.7,<0.6.0
     - langchain >=0.0.303
-    - sqlalchemy >=2.0.15
-    - numpy
+    - sqlalchemy >=1.4.49
+    - numpy *
     - tenacity >=8.2.0,<9.0.0
     - openai >=0.26.4
-    - pandas
+    - pandas *
     - urllib3 <2
     - fsspec >=2023.5.0
     - typing_inspect >=0.8.0
     - typing-extensions >=4.5.0
     - beautifulsoup4
-    - nest-asyncio
-    - nltk
+    - nest-asyncio >=1.5.8,<2.0.0
+    - nltk >=3.8.1,<4.0.0
     - tree_sitter_languages
 
 test:
