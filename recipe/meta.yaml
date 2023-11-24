@@ -37,7 +37,7 @@ requirements:
     - typing-extensions >=4.5.0
     - typing-inspect >=0.8.0
     - requests >=2.31.0
-    - aiostream >=0.5.2<0.6.0
+    - aiostream >=0.5.2,<0.6.0
     - aiohttp >=3.8.6,<4.0.0
   run_constrained:
     - langchain >=0.0.303
