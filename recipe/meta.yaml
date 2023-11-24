@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.8,<3.12
     - pip
     - poetry
     - poetry-core
   run:
-    - python >=3.8
+    - python >=3.8,<3.12
     - SQLAlchemy >=1.4.49
     - greenlet !=0.4.17
     - beautifulsoup4 >=4.12.2,<5.0.0
