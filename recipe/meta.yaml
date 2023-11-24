@@ -20,37 +20,47 @@ requirements:
     - pip
   run:
     - python >=3.8,<=3.12
-    - SQLAlchemy ={extras = ["asyncio"], version = ">=1.4.49"}
-    - beautifulsoup4 ="^4.12.2"
-    - dataclasses-json ="*"
+    - SQLAlchemy >=1.4.49
+    - greenlet !=0.4.17
+    - beautifulsoup4 =">=4.12.2,<5.0.0"
+    - dataclasses-json
     - deprecated =">=1.2.9.3"
     - fsspec =">=2023.5.0"
-    - httpx ="*"
-    - langchain ={optional = true, version = ">=0.0.303"}
-    - nest-asyncio ="^1.5.8"
-    - nltk ="^3.8.1"
-    - numpy ="*"
+    - httpx
+    - nest-asyncio =">=1.5.8,<2.0.0"
+    - nltk ="3.8.1"
+    - numpy
     - openai =">=1.1.0"
-    - pandas ="*"
+    - pandas
     - tenacity =">=8.2.0,<9.0.0"
     - tiktoken =">=0.3.3"
     - typing-extensions =">=4.5.0"
     - typing-inspect =">=0.8.0"
     - requests =">=2.31.0"
-    - asyncpg ={optional = true, version = "^0.28.0"}
-    - pgvector ={optional = true, version = "^0.1.0"}
-    - psycopg-binary ={optional = true, version = "^3.1.12"}
-    - optimum ={extras = ["onnxruntime"], optional = true, version = "^1.13.2"}
-    - sentencepiece ={optional = true, version = "^0.1.99"}
-    - transformers ={extras = ["torch"], optional = true, version = "^4.34.0"}
-    - guidance ={optional = true, version = "^0.0.64"}
-    - lm-format-enforcer ={optional = true, version = "^0.4.3"}
-    - jsonpath-ng ={optional = true, version = "^1.6.0"}
-    - rank-bm25 ={optional = true, version = "^0.2.2"}
-    - scikit-learn ={optional = true, version = "<1.3.0"}
-    - spacy ={optional = true, version = "^3.7.1"}
-    - aiostream ="^0.5.2"
-    - aiohttp ="^3.8.6"
+    - aiostream =">=0.5.2<1.0.0"
+    - aiohttp =">=3.8.6,<4.0.0"
+  run_constrained:
+    - langchain =">=0.0.303"
+    - asyncpg =">=0.28.0,<1.0.0"
+    - pgvector =">=0.1.0,<1.0.0"
+    - psycopg-binary =">=3.1.12,<4.0.0"
+    - optimum =">=1.13.2,<2.0.0"
+    - onnx
+    - onnxruntime =">=1.11.0"
+    - datasets =">=1.2.1"
+    - evaluate
+    - protobuf =">=3.20.1"
+    - sentencepiece =">=0.1.99,<2.0.0"
+    - transformers =">=4.34.0,<5.0.0"
+    - torch
+    - accelerate
+    - guidance =">=0.0.64,<1.0.0"
+    - lm-format-enforcer =">=0.4.3,<1.0.0"
+    - jsonpath-ng =">=1.6.0,<2.0.0"
+    - rank-bm25 =">=0.2.2,<1.0.0"
+    - scikit-learn ="<1.3.0"
+    - spacy =">=3.7.1,<4.0.0"
+
 
 test:
   imports:
