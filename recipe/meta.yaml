@@ -18,6 +18,8 @@ requirements:
   host:
     - python >=3.8
     - pip
+    - poetry
+    - poetry-core
   run:
     - python >=3.8
     - SQLAlchemy >=1.4.49
