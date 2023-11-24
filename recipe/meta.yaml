@@ -19,7 +19,7 @@ requirements:
     - python >=3.8,<3.12
     - pip
   run:
-    - python >=3.8<=3.12
+    - python >=3.8,<=3.12
     - SQLAlchemy ={extras = ["asyncio"], version = ">=1.4.49"}
     - beautifulsoup4 ="^4.12.2"
     - dataclasses-json ="*"
