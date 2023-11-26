@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.9.7" %}
+{% set version = "0.9.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: ce0d0ddf318087c9db6dfd17114515d5ea23efebdd2c4f4d565dfca43f0825d4
+  sha256: 9c3ef82487411173f6f7c87f4ec99e70045ce81ba12663a3573bcd2171900d8b
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - poetry
     - poetry-core
   run:
+    - sqlalchemy >=1.4.49
     - python >=3.8,<3.12
     - SQLAlchemy >=1.4.49
     - greenlet !=0.4.17
@@ -30,7 +31,7 @@ requirements:
     - fsspec >=2023.5.0
     - httpx
     - nest-asyncio >=1.5.8,<2.0.0
-    - nltk =3.8.1
+    - nltk >=3.8.1,<4.0.0
     - numpy
     - openai >=1.1.0
     - pandas
