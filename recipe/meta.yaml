@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.9.14.post3" %}
+{% set version = "0.9.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: 340591e3378ae152f7c722d998d5f6f81547d43f552fbfcb32288b7a3d073c48
+  sha256: 0f6501db61a6b72ed8c293353331b58d16db202323c9312241b071ce1f78a655
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - poetry
     - poetry-core
   run:
+    - types-protobuf >=4.24.0,<5.0.0
     - sqlalchemy >=1.4.49
     - python >=3.8,<3.12
     - SQLAlchemy >=1.4.49
