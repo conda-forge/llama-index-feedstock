@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.9.39" %}
+{% set version = "0.9.41" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: c0d4093cd1c6d6056275f96d6acba56f383ef98925c9ce3fc8cde9fb4dee1f75
+  sha256: 5203f137789dedb623cc415ad3cc88ba2d3664453715bb9405092191023b7fe6
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - poetry
     - poetry-core
   run:
+    - dirtyjson >=1.0.8,<2.0.0
     - networkx >=3.0
     - types-protobuf >=4.24.0,<5.0.0
     - sqlalchemy >=1.4.49
