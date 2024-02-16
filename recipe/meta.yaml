@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.9.48" %}
+{% set version = "0.10.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: c50d02ac8c7e4ff9fb41f0860391fe0020ad8a3d7c30048db52d17d8be654bf3
+  sha256: 08f07d1d2db9f2ea9b2b0dc27ca2bcc6fa56a95d81a99f913e0e753c8693dbd7
 
 build:
   noarch: python
@@ -21,6 +21,15 @@ requirements:
     - poetry
     - poetry-core
   run:
+    - llama-index-agent-openai >=0.1.0,<0.2.0
+    - llama-index-core >=0.10.0,<0.11.0
+    - llama-index-embeddings-openai >=0.1.0,<0.2.0
+    - llama-index-legacy >=0.9.48,<0.10.0
+    - llama-index-llms-openai >=0.1.0,<0.2.0
+    - llama-index-multi-modal-llms-openai >=0.1.0,<0.2.0
+    - llama-index-program-openai >=0.1.0,<0.2.0
+    - llama-index-question-gen-openai >=0.1.0,<0.2.0
+    - llama-index-readers-file >=0.1.0,<0.2.0
     - dirtyjson >=1.0.8,<2.0.0
     - networkx >=3.0
     - types-protobuf >=4.24.0,<5.0.0
