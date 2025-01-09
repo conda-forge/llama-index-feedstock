@@ -22,6 +22,7 @@ requirements:
     - poetry
     - poetry-core
   run:
+    - python >={{ python_min }}
     - llama-index-cli >=0.4.0,<0.5.0
     - llama-index-indices-managed-llama-cloud >=0.4.0
     - llama-index-readers-llama-parse >=0.4.0
