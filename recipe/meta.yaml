@@ -37,7 +37,7 @@ requirements:
   run_constrained:
     - langchain >=0.0.303
     - asyncpg >=0.28.0,<0.29.0
-    - pgvector >=0.1.0,<0.2.0
+    - pgvector >=0.3.6,<1.0.0
     - psycopg-binary >=3.1.12,<4.0.0
     - optimum >=1.13.2,<2.0.0
     - onnxruntime >=1.11.0
