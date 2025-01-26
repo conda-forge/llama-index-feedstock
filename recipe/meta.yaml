@@ -1,6 +1,5 @@
 {% set name = "llama-index" %}
 {% set version = "0.12.14" %}
-{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
