@@ -19,8 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - poetry
-    - poetry-core
+    - hatchling
   run:
     - python >={{ python_min }}
     - llama-index-cli >=0.4.1,<0.5
