@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.12.33" %}
+{% set version = "0.12.34" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: 038da75552784f0e22379b6a816f36f74b31b28c6cbca063222c5f4225a2b497
+  sha256: 6a94ca245606c9a8f98e7c36bd3269176bf3e3430066876e7739a8cdd3df1ffe
 
 build:
   noarch: python
@@ -19,22 +19,21 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - poetry
-    - poetry-core
+    - hatchling
   run:
     - python >={{ python_min }}
-    - llama-index-cli >=0.4.1,<0.5.0
+    - llama-index-cli >=0.4.1,<0.5
     - llama-index-indices-managed-llama-cloud >=0.4.0
     - llama-index-readers-llama-parse >=0.4.0
-    - llama-index-agent-openai >=0.4.0,<0.5.0
-    - llama-index-core >=0.12.33,<0.13.0
-    - llama-index-embeddings-openai >=0.3.0,<0.4.0
+    - llama-index-agent-openai >=0.4.0,<0.5
+    - llama-index-core >=0.12.34,<0.13
+    - llama-index-embeddings-openai >=0.3.0,<0.4
     - llama-index-legacy >=0.9.48,<0.10.0
-    - llama-index-llms-openai >=0.3.0,<0.4.0
-    - llama-index-multi-modal-llms-openai >=0.4.0,<0.5.0
-    - llama-index-program-openai >=0.3.0,<0.4.0
-    - llama-index-question-gen-openai >=0.3.0,<0.4.0
-    - llama-index-readers-file >=0.4.0,<0.5.0
+    - llama-index-llms-openai >=0.3.0,<0.4
+    - llama-index-multi-modal-llms-openai >=0.4.0,<0.5
+    - llama-index-program-openai >=0.3.0,<0.4
+    - llama-index-question-gen-openai >=0.3.0,<0.4
+    - llama-index-readers-file >=0.4.0,<0.5
     - nltk >3.8.1
   run_constrained:
     - langchain >=0.0.303
