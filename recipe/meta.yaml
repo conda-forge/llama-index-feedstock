@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.12.46" %}
+{% set version = "0.12.47" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: c45756d76faf2c94de1476d2315601125fbe084f887b25c6abbcef71c860cb45
+  sha256: 5eee7919cb31fe7436e16e1ef31e85f31e57bd0dcf228be5836e81520120febe
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - llama-index-indices-managed-llama-cloud >=0.4.0
     - llama-index-readers-llama-parse >=0.4.0
     - llama-index-agent-openai >=0.4.0,<0.5
-    - llama-index-core >=0.12.46,<0.13
+    - llama-index-core >=0.12.47,<0.13
     - llama-index-embeddings-openai >=0.3.0,<0.4
     - llama-index-legacy >=0.9.48,<0.10.0
     - llama-index-llms-openai >=0.4.0,<0.5
