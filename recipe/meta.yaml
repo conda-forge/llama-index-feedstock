@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.12.52" %}
+{% set version = "0.13.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: 3a81fa4fbf1a36e30502d2fb7da26d53bc1a1ab02db1db12e62f06bb014d5ad9
+  sha256: 00f4c61d96a83af5d770a992006f0039eb671c2a64eaab9da3660bee921177f2
 
 build:
   noarch: python
@@ -22,18 +22,18 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - llama-index-cli >=0.4.2,<0.5
+    - llama-index-cli >=0.5.0,<0.6
     - llama-index-indices-managed-llama-cloud >=0.4.0
     - llama-index-readers-llama-parse >=0.4.0
     - llama-index-agent-openai >=0.4.0,<0.5
-    - llama-index-core >=0.12.52.post1,<0.13
-    - llama-index-embeddings-openai >=0.3.0,<0.4
+    - llama-index-core >=0.13.0,<0.14
+    - llama-index-embeddings-openai >=0.5.0,<0.6
     - llama-index-legacy >=0.9.48,<0.10.0
-    - llama-index-llms-openai >=0.4.0,<0.5
+    - llama-index-llms-openai >=0.5.0,<0.6
     - llama-index-multi-modal-llms-openai >=0.5.0,<0.6
     - llama-index-program-openai >=0.3.0,<0.4
     - llama-index-question-gen-openai >=0.3.0,<0.4
-    - llama-index-readers-file >=0.4.0,<0.5
+    - llama-index-readers-file >=0.5.0,<0.6
     - nltk >3.8.1
   run_constrained:
     - langchain >=0.0.303
