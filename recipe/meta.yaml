@@ -1,5 +1,5 @@
 {% set name = "llama-index" %}
-{% set version = "0.12.52" %}
+{% set version = "0.13.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
-  sha256: 3a81fa4fbf1a36e30502d2fb7da26d53bc1a1ab02db1db12e62f06bb014d5ad9
+  sha256: 00f4c61d96a83af5d770a992006f0039eb671c2a64eaab9da3660bee921177f2
 
 build:
   noarch: python
@@ -22,38 +22,14 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - llama-index-cli >=0.4.2,<0.5
+    - llama-index-cli >=0.5.0,<0.6
+    - llama-index-core >=0.13.0,<0.14
+    - llama-index-embeddings-openai >=0.5.0,<0.6
     - llama-index-indices-managed-llama-cloud >=0.4.0
+    - llama-index-llms-openai >=0.5.0,<0.6
+    - llama-index-readers-file >=0.5.0,<0.6
     - llama-index-readers-llama-parse >=0.4.0
-    - llama-index-agent-openai >=0.4.0,<0.5
-    - llama-index-core >=0.12.52.post1,<0.13
-    - llama-index-embeddings-openai >=0.3.0,<0.4
-    - llama-index-legacy >=0.9.48,<0.10.0
-    - llama-index-llms-openai >=0.4.0,<0.5
-    - llama-index-multi-modal-llms-openai >=0.5.0,<0.6
-    - llama-index-program-openai >=0.3.0,<0.4
-    - llama-index-question-gen-openai >=0.3.0,<0.4
-    - llama-index-readers-file >=0.4.0,<0.5
     - nltk >3.8.1
-  run_constrained:
-    - langchain >=0.0.303
-    - asyncpg >=0.29.0,<0.30.0
-    - pgvector >=0.3.6,<1.0.0
-    - psycopg-binary >=3.1.12,<4.0.0
-    - optimum >=1.13.2,<2.0.0
-    - onnxruntime >=1.11.0
-    - datasets >=1.2.1
-    - evaluate
-    - protobuf >=3.20.1
-    - sentencepiece *
-    - transformers >=4.34.0,<5.0.0
-    - guidance >=0.0.64,<1.0.0
-    - lm-format-enforcer >=0.4.3,<0.5.0
-    - jsonpath-ng >=1.6.0,<2.0.0
-    - rank-bm25 >=0.2.2,<0.3.0
-    - scikit-learn *
-    - spacy >=3.7.1,<4.0.0
-
 
 test:
   imports:
