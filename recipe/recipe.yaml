@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: llama-index
   version: "0.14.24"
-  python_min: "3.10"
 
 package:
   name: ${{ name|lower }}
@@ -20,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python 3.10.*
+    - python ${{ python_min }}.*
     - pip
     - hatchling
   run:
@@ -39,7 +38,9 @@ tests:
       imports:
         - llama_index
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: Interface between LLMs and your data
