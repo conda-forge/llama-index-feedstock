@@ -1,27 +1,29 @@
-{% set name = "llama-index" %}
-{% set version = "0.14.24" %}
-{% set python_min = "3.10" %}
+schema_version: 1
+
+context:
+  name: llama-index
+  version: "0.14.24"
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/llama_index-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/llama_index-${{ version }}.tar.gz
   sha256: 9574d3dbd6ba247bd523e78771647807794cce9a47410dbc70ed337bb610a6ff
 
 build:
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - hatchling
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - llama-index-cli >=0.5.0,<0.6
     - llama-index-core >=0.14.24,<0.15.0
     - llama-index-embeddings-openai >=0.6.0,<0.7
@@ -31,20 +33,20 @@ requirements:
     - llama-index-readers-llama-parse >=0.4.0
     - nltk >=3.9.3
 
-test:
-  imports:
-    - llama_index
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - llama_index
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
-  home: https://github.com/run-llama/llama_index
   summary: Interface between LLMs and your data
   license: MIT
   license_file: LICENSE
+  homepage: https://github.com/run-llama/llama_index
 
 extra:
   recipe-maintainers:
