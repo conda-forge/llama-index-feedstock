@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: llama-index
-  version: "0.14.24"
+  version: 0.14.25
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/llama_index-${{ version }}.tar.gz
-  sha256: 9574d3dbd6ba247bd523e78771647807794cce9a47410dbc70ed337bb610a6ff
+  sha256: 242269bf0dec5f73733572d10866b34aba86f049549fd97612f554461f549e68
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -24,15 +24,10 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - llama-index-cli >=0.5.0,<0.6
-    - llama-index-core >=0.14.24,<0.15.0
+    - llama-index-core >=0.14.25,<0.15.0
     - llama-index-embeddings-openai >=0.6.0,<0.7
-    - llama-index-indices-managed-llama-cloud >=0.4.0
     - llama-index-llms-openai >=0.7.0,<0.8
-    - llama-index-readers-file >=0.5.0,<0.6
-    - llama-index-readers-llama-parse >=0.4.0
     - nltk >=3.9.3
-
 tests:
   - python:
       imports:
@@ -40,7 +35,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: Interface between LLMs and your data
