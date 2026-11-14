@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: llama-index
-  version: 0.14.25
+  version: 0.14.26
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/llama_index-${{ version }}.tar.gz
-  sha256: 242269bf0dec5f73733572d10866b34aba86f049549fd97612f554461f549e68
+  sha256: 3a63dc35f76db875bc894ca0e9d68a72462cae164fb38d5a70d8fa472773612f
 
 build:
   number: 0
@@ -24,9 +24,9 @@ requirements:
     - hatchling
   run:
     - python >=${{ python_min }}
-    - llama-index-core >=0.14.25,<0.15.0
-    - llama-index-embeddings-openai >=0.6.0,<0.7
-    - llama-index-llms-openai >=0.7.0,<0.8
+    - llama-index-core >=0.14.26,<0.15.0
+    - llama-index-embeddings-openai >=0.6.0,<0.9
+    - llama-index-llms-openai >=0.7.0,<0.10
     - nltk >=3.9.3
 tests:
   - python:
